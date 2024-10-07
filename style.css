@@ -1,0 +1,128 @@
+body {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Quintessential';
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.container-flower {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.text {
+  font-size: 30px;
+  text-align: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  border-radius: 50px;
+  height: 50px;
+  width: 100px;
+  background-color: brown;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: burlywood;
+  color: brown;
+}
+
+.flower {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(223, 223, 223, 1) 43%,
+    rgba(248, 32, 207, 1) 100%
+  );
+  width: 280px;
+  height: 100px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.flower::before {
+  content: '';
+  width: 280px;
+  height: 100px;
+  transform: rotate(60deg);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(223, 223, 223, 1) 43%,
+    rgba(248, 32, 207, 1) 100%
+  );
+  position: absolute;
+  border-radius: 50px;
+  display: block;
+}
+
+.flower::after {
+  content: '';
+  width: 280px;
+  height: 100px;
+  transform: rotate(120deg);
+  background-color: red;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(223, 223, 223, 1) 43%,
+    rgba(248, 32, 207, 1) 100%
+  );
+  border-radius: 50px;
+  position: absolute;
+  display: block;
+}
+
+.inner__flower {
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 248, 98);
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 98, 1) 0%,
+    rgba(255, 234, 137, 1) 30%,
+    rgba(255, 230, 118, 1) 100%
+  );
+  position: absolute;
+  z-index: 999;
+  border-radius: 100%;
+}
+
+.stem__flower {
+  width: 30px;
+  height: 400px;
+  border-radius: 40px 40px 0 0;
+  background: rgb(0, 176, 88);
+  background: radial-gradient(
+    circle,
+    rgba(0, 176, 88, 1) 0%,
+    rgba(41, 255, 69, 1) 30%,
+    rgba(0, 148, 4, 1) 100%
+  );
+  position: absolute;
+  z-index: -1;
+}
